@@ -4,10 +4,14 @@
 <p>And one more thing - I'm using podman as a CLI to install and manage Docker images. As long as you aren't using features like docker-swarm, podman's interface is 100% compatible with docker cli. So why podman? It's rootless (doesn't require root), also works better with Fedora/Red Hat, is less updated, doesn't require it's own repository etc. Since for my purposes podman and docker work the same I will use these terms interchangably but that does not apply to docker hub, because podman doesn't have it's hub and can use official Docker repository and other repositories.</p>
 <p>Podman can use many docker image repositories, but I had the best luck with the docker.io repository.</p>
 <h2>Installing podman</h2>
-<p>In Fedora just type:
-    dnf install podman</p>
-<p>In Debian/Ubuntu based distos run:
-    apt-get -y install podman</p>
+<p>In Fedora just type:</p>
+<div class="code"><pre class="code literal-block">dnf install podman
+</pre></div>
+
+<p>In Debian/Ubuntu based distos run:</p>
+<div class="code"><pre class="code literal-block">apt-get -y install podman
+</pre></div>
+
 <p>For other distros visit: <a href="https://podman.io/getting-started/installation">podman installation</a> .</p>
 <h2>Running mysql image</h2>
 <p>Running a docker image actually does much more than running behind the scenes: it downloads the image if necessary, creates container based on the image and runs it based on the parameters given in the run command.</p>
