@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Max's tech site (Posts about mysql)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/mysql.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:max.python.wizard@gmail.com"&gt;Python Wizard&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 May 2022 06:15:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Installing Mysql using Docker container</title><link>https://example.com/posts/installing-mysql-using-docker-container/</link><dc:creator>Python Wizard</dc:creator><description>&lt;h2&gt;Installing Mysql using Docker container&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Max's tech site (Posts about mysql)</title><link>https://example.com/</link><description></description><atom:link href="https://example.com/categories/mysql.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:max.python.wizard@gmail.com"&gt;Python Wizard&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 May 2022 06:18:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Installing Mysql using Docker container</title><link>https://example.com/posts/installing-mysql-using-docker-container/</link><dc:creator>Python Wizard</dc:creator><description>&lt;h2&gt;Installing Mysql using Docker container&lt;/h2&gt;
 &lt;p&gt;For my classes and my own learning I wanted to install mysql database. Mysql comes with dependencies and it's better to separate the database and isolate it from the environment. One of the best and most convenient ways of doing so is by using containers and Docker containers in particular.&lt;/p&gt;
 &lt;p&gt;So that's the goal, let's set up mysql on our system inside a Docker contaier and connect to it throgh software for managing databases like DBeaver or DataGrip.&lt;/p&gt;
 &lt;p&gt;And one more thing - I'm using podman as a CLI to install and manage Docker images. As long as you aren't using features like docker-swarm, podman's interface is 100% compatible with docker cli. So why podman? It's rootless (doesn't require root), also works better with Fedora/Red Hat, is less updated, doesn't require it's own repository etc. Since for my purposes podman and docker work the same I will use these terms interchangably but that does not apply to docker hub, because podman doesn't have it's hub and can use official Docker repository and other repositories.&lt;/p&gt;
 &lt;p&gt;Podman can use many docker image repositories, but I had the best luck with the docker.io repository.&lt;/p&gt;
 &lt;h3&gt;Installing podman&lt;/h3&gt;
-&lt;p&gt;In Fedora just type:
-    dnf install podman&lt;/p&gt;
-&lt;p&gt;In Debian/Ubuntu based distos run:
-    apt-get -y install podman&lt;/p&gt;
+&lt;p&gt;In Fedora just type:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;dnf install podman
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In Debian/Ubuntu based distos run:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;apt-get -y install podman
+&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;For other distros visit: &lt;a href="https://podman.io/getting-started/installation"&gt;podman installation&lt;/a&gt; .&lt;/p&gt;
 &lt;h3&gt;Running mysql image&lt;/h3&gt;
 &lt;p&gt;Running a docker image actually does much more than running behind the scenes: it downloads the image if necessary, creates container based on the image and runs it based on the parameters given in the run command.&lt;/p&gt;

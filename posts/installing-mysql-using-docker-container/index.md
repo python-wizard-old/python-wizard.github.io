@@ -22,9 +22,11 @@ Podman can use many docker image repositories, but I had the best luck with the 
 ## Installing podman
 
 In Fedora just type:
+
     dnf install podman
     
 In Debian/Ubuntu based distos run:
+
     apt-get -y install podman
 
 For other distros visit: [podman installation](https://podman.io/getting-started/installation) .
