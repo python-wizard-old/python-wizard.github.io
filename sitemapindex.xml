@@ -6,15 +6,27 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://example.com/categories/docker.xml</loc>
+  <lastmod>2022-05-23T06:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/mysql.xml</loc>
+  <lastmod>2022-05-23T06:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://example.com/categories/podman.xml</loc>
+  <lastmod>2022-05-23T06:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://example.com/galleries/rss.xml</loc>
   <lastmod>2022-05-22T04:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/rss.xml</loc>
-  <lastmod>2022-05-22T04:02:00Z</lastmod>
+  <lastmod>2022-05-23T06:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://example.com/sitemap.xml</loc>
-  <lastmod>2022-05-22T04:28:00Z</lastmod>
+  <lastmod>2022-05-23T06:15:00Z</lastmod>
  </sitemap>
 </sitemapindex>
